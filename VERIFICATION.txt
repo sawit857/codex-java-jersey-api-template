@@ -1,73 +1,80 @@
-Codex Java 8 Jersey API Template - Generation Verification
-Generated: 2026-07-19
+Codex Java 8 Jersey API Template v3 - Verification Record
+Generated: 2026-07-20 (Asia/Bangkok)
 
-SCOPE
-- Detailed repository policy, custom agents, skills, checklists, prompts, spec,
-  Java sample implementation, tests, plan/review/API-doc examples, and scripts.
+PURPOSE OF V3
+- Review the downloadable repository against the design discussed in Steps 1-19.
+- Add a Thai Codex.app usage guide.
+- Add a Thai prompt cookbook with copy/paste commands by case.
+- Complete the prompt library categories described in Step 17.
+- Add concise workflow state/gate references described in Step 15.
 
-STATIC VALIDATION: PASS
-- Files checked: 75 before this verification record was added
+STEP 1-19 CONTENT REVIEW: PASS
+- Steps reviewed: 19
+- PASS after v3 corrections: 19
+- Blocking content gap: 0
+- Full mapping: docs/STEP-01-19-REVIEW-TH.md
+
+FRESH V3 STATIC VALIDATION: PASS
+- Repository files: 95
 - Custom agents: 5
-  api_analyst, api_developer, api_doc_writer, api_reviewer, api_tester
 - Repository skills: 6
-  api-analyze, api-document, api-implement, api-review, api-test, api-workflow
-- Prompt files: 11
+- Markdown prompt files: 24
 - Production Java files: 24
 - Test Java files: 3
-- TOML parse/schema checks: PASS
-- Skill frontmatter and directory-name checks: PASS
+- Required Step 1-19 files: present
+- TOML parse and required custom-agent fields: PASS
+- .codex/config.toml agent limits: PASS
+- Skill frontmatter/name/directory consistency: PASS
 - pom.xml and web.xml XML parsing: PASS
 - JSON example parsing: PASS
-- Java package/path checks: PASS
-- No jakarta imports: PASS
-- Java 9+ construct scan: PASS
 - Agent and skill reference consistency: PASS
-- Endpoint/status/error-code contract checks: PASS
-- Shell script syntax checks: PASS
-- Secret/generated-output scan: PASS
+- Java source jakarta-import scan: PASS
+- Common Java 9+ construct scan: PASS
+- Six endpoint presence in specification: PASS
+- JAX-RS method annotation presence in resource: PASS
+- README guide/review links: PASS
+- Expected case-prompt files: PASS
+- Shell script syntax (bash -n): PASS
 
-JAVA 8 COMPILE CHECKS: PASS
-1. All 24 production Java files were compiled with:
-   javac --release 8
-   using minimal generated stubs for external Jersey/JAX-RS/Jackson APIs.
-   Result: PASS (24 project class files generated).
+V2 SOURCE BASELINE
+The following v3 content is byte-identical to the reviewed v2 source baseline:
+- pom.xml
+- src/main/
+- src/test/
+- spec/
+- AGENTS.md
+- .codex/
+- api-analyze/api-implement/api-test/api-review/api-document skills
 
-2. All 3 test source files plus production source were compiled with:
-   javac --release 8
-   using minimal generated stubs for JUnit/Jersey Test/AssertJ APIs.
-   Result: PASS (3 test class files generated).
+V2 GENERATION EVIDENCE RETAINED
+The v2 generation record reported:
+- javac --release 8 type/syntax compilation with generated external API stubs: PASS
+- core service/repository smoke behavior: PASS
 
-CORE BEHAVIOR SMOKE: PASS
-- create task
-- title/description normalization
-- server-generated ID
-- default OPEN status
-- status update
-- status filtering
-- deletion
-- blank-title validation
+Those Java checks were not freshly repeated for v3 because the Java source, tests,
+POM, specification, AGENTS.md, and custom-agent definitions are unchanged; v3 changes
+are documentation, case prompts, workflow references, README links, and state guide.
 
-FULL MAVEN VERIFICATION: NOT RUN IN GENERATION ENVIRONMENT
-Attempted command prerequisite:
-  mvn -version
-Observed result:
-  mvn: command not found
+FULL MAVEN VERIFICATION: NOT RUN
+Observed in this environment:
+  command -v mvn
+Result:
+  Maven not found
 
-The generation environment had no Maven installation and outbound shell
-network resolution was unavailable, so dependencies could not be resolved
-for a real Jersey/JUnit execution. This is an environment limitation, not a
-claim that mvn clean verify passed.
+The environment does not have Maven, so this record does not claim that Jersey/JUnit
+integration tests or mvn clean verify passed.
 
-REQUIRED LOCAL VERIFICATION AFTER DOWNLOAD
-From repository root, with JDK 8 and Maven installed:
+REQUIRED LOCAL VERIFICATION
+macOS/Linux:
   ./scripts/verify.sh
 
-or on Windows:
+Windows:
   scripts\verify.cmd
 
 Success requires:
 - Maven BUILD SUCCESS
-- Surefire reports exist
 - tests run > 0
 - failures = 0
 - errors = 0
+- current plan/review/API document
+- no unresolved CRITICAL/HIGH finding

@@ -22,6 +22,22 @@ The example application is a **Task Management REST API** implemented with:
 
 The API is intentionally small. The main purpose is to demonstrate the Codex workflow, not to build a production task platform.
 
+
+## เอกสารเริ่มต้นภาษาไทย
+
+- [`docs/CODEX-USAGE-GUIDE-TH.md`](docs/CODEX-USAGE-GUIDE-TH.md) — วิธีใช้ Codex.app แบบ phase-by-phase
+- [`docs/PROMPT-COOKBOOK-TH.md`](docs/PROMPT-COOKBOOK-TH.md) — prompt พร้อมใช้ตาม case
+- [`docs/STEP-01-19-REVIEW-TH.md`](docs/STEP-01-19-REVIEW-TH.md) — ผลเทียบ template กับ Step 1–19
+
+Recommended order:
+
+```text
+README.md
+-> AGENTS.md
+-> docs/CODEX-USAGE-GUIDE-TH.md
+-> docs/PROMPT-COOKBOOK-TH.md
+```
+
 ---
 
 ## 1. Repository map
