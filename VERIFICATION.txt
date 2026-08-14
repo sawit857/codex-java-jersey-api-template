@@ -1,0 +1,73 @@
+Codex Java 8 Jersey API Template - Generation Verification
+Generated: 2026-07-19
+
+SCOPE
+- Detailed repository policy, custom agents, skills, checklists, prompts, spec,
+  Java sample implementation, tests, plan/review/API-doc examples, and scripts.
+
+STATIC VALIDATION: PASS
+- Files checked: 75 before this verification record was added
+- Custom agents: 5
+  api_analyst, api_developer, api_doc_writer, api_reviewer, api_tester
+- Repository skills: 6
+  api-analyze, api-document, api-implement, api-review, api-test, api-workflow
+- Prompt files: 11
+- Production Java files: 24
+- Test Java files: 3
+- TOML parse/schema checks: PASS
+- Skill frontmatter and directory-name checks: PASS
+- pom.xml and web.xml XML parsing: PASS
+- JSON example parsing: PASS
+- Java package/path checks: PASS
+- No jakarta imports: PASS
+- Java 9+ construct scan: PASS
+- Agent and skill reference consistency: PASS
+- Endpoint/status/error-code contract checks: PASS
+- Shell script syntax checks: PASS
+- Secret/generated-output scan: PASS
+
+JAVA 8 COMPILE CHECKS: PASS
+1. All 24 production Java files were compiled with:
+   javac --release 8
+   using minimal generated stubs for external Jersey/JAX-RS/Jackson APIs.
+   Result: PASS (24 project class files generated).
+
+2. All 3 test source files plus production source were compiled with:
+   javac --release 8
+   using minimal generated stubs for JUnit/Jersey Test/AssertJ APIs.
+   Result: PASS (3 test class files generated).
+
+CORE BEHAVIOR SMOKE: PASS
+- create task
+- title/description normalization
+- server-generated ID
+- default OPEN status
+- status update
+- status filtering
+- deletion
+- blank-title validation
+
+FULL MAVEN VERIFICATION: NOT RUN IN GENERATION ENVIRONMENT
+Attempted command prerequisite:
+  mvn -version
+Observed result:
+  mvn: command not found
+
+The generation environment had no Maven installation and outbound shell
+network resolution was unavailable, so dependencies could not be resolved
+for a real Jersey/JUnit execution. This is an environment limitation, not a
+claim that mvn clean verify passed.
+
+REQUIRED LOCAL VERIFICATION AFTER DOWNLOAD
+From repository root, with JDK 8 and Maven installed:
+  ./scripts/verify.sh
+
+or on Windows:
+  scripts\verify.cmd
+
+Success requires:
+- Maven BUILD SUCCESS
+- Surefire reports exist
+- tests run > 0
+- failures = 0
+- errors = 0
